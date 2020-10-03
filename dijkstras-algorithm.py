@@ -275,5 +275,13 @@ def cheapestPath(G2,start_vertex,end_vertex,visited=[],distances={},predecessors
         x=min(unvisited, key=unvisited.get)
         return cheapestPath(G2,x,end_vertex,visited,distances,predecessors)
 
+global userCancelled, userOK
+userCancelled		= "Cancelled"
+userOK			= "OK"
+
+
 app = QtGui.QApplication(sys.argv)
 form = GuiClass()
+
+print(cheapestPath(graphCost, "Stoke", "Rome"))
+print(fastestPath(graphTime, "Berlin", "Calais"))
